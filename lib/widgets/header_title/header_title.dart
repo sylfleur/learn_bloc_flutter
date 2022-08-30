@@ -1,3 +1,4 @@
+import 'package:bloc_form/widgets/text_style.dart';
 import 'package:flutter/material.dart';
 
 class HeaderTitlle extends StatelessWidget {
@@ -5,22 +6,31 @@ class HeaderTitlle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var heighT = MediaQuery.of(context).size.height;
     return Container(
       color: Colors.amber,
-      height: 100,
+      height: heighT / 5,
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(18.0),
         child: Row(
-          // crossAxisAlignment: CrossAxisAlignment.stretch,
+          crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: const <Widget>[
-                Text('Welcome Fleurian'),
-                Text('Welcome Fleurian'),
+                TitleWidget(text: 'Welcome Fleurian', size: 20),
+                TitleWidget(
+                  text: 'Que voulez-vous jouer aujourd\'hui',
+                  size: 15,
+                ),
               ],
             ),
-            const CircleAvatar()
+            CircleAvatar(
+              child: Image.asset(
+                'assets/images/pic_fleurian.jpeg',
+              ),
+            )
           ],
         ),
       ),

@@ -10,8 +10,8 @@ class RawgHomeScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Column(
-          children: <Widget>[
-            const HeaderTitlle(),
+          children: const <Widget>[
+            HeaderTitlle(),
           ],
         ),
       ),
